@@ -3,9 +3,11 @@
   <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 <head>
   <meta charset="UTF-8" />
+  <meta name="theme-color" content="#0f172a">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TON Miner</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -13,22 +15,13 @@
   <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
     <div class="w-full max-w-md p-6 bg-gray-800 rounded-lg shadow-lg text-center space-y-4">
   
-      <h1 class="text-2xl font-bold">TON Miner</h1>
+      <h1 class="text-2xl font-bold">Miner</h1>
   
-      <div id="walletAddress" class="text-sm text-gray-400">
-        Кошелёк не подключён
-      </div>
+      <div id="walletAddress" class="text-sm text-gray-400">Кошелёк не подключён</div>
   
-      <button id="connectButton"
-        class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold">
-        Подключить кошелёк
-      </button>
+      <button id="connectButton" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold">Подключить кошелёк</button>
   
-      <button id="mineButton"
-        class="w-full py-2 px-4 bg-green-600 hover:bg-green-700 rounded text-white font-semibold"
-        disabled>
-        Начать майнинг
-      </button>
+      <button id="mineButton" class="w-full py-2 px-4 bg-green-600 hover:bg-green-700 rounded text-white font-semibold">Начать майнинг</button>
   
       <div id="status" class="text-sm text-gray-300"></div>
     </div>
