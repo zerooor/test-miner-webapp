@@ -36,8 +36,15 @@ async function startMining(taskData, difficulty) {
     }
 
     nonce++;
+  }
 
-    // Отправка результата на сервер
+  statusDiv.textContent = `Майнинг завершён!
+Nonce: ${nonce}
+Hash: ${hash}`;
+
+  mineButton.disabled = false;
+
+  // Отправка результата на сервер
   fetch('http://localhost:3000/submit', {
     method: 'POST',
     headers: {
@@ -59,13 +66,4 @@ async function startMining(taskData, difficulty) {
   .catch(err => {
     statusDiv.textContent += `\nОшибка при отправке на сервер: ${err.message}`;
   });
-  }
-
-  statusDiv.textContent = `Майнинг завершён!
-Nonce: ${nonce}
-Hash: ${hash}`;
-
-  mineButton.disabled = false;
-
-  // позже здесь добавим: отправка результата на сервер
 }
