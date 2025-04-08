@@ -1,6 +1,6 @@
 {
   "manifest_version": "1",
-  "name": "TON Miner WebApp",
+  "name": "Miner WebApp",
   "short_name": "TONMiner",
   "description": "Майнинг с PoW и наградами в TON",
   "icons": [
