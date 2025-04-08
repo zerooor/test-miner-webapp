@@ -5,7 +5,7 @@ const walletAddressDiv = document.getElementById("walletAddress");
 
 // Инициализация TON Connect UI
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl: 'https://<ТВОЙ_ЮЗЕРНЕЙМ>.github.io/ton-miner-webapp/tonconnect-manifest.json',
+  manifestUrl: 'https://zerooor.github.io/test-miner-webapp/tonconnect-manifest.json',
   buttonRootId: 'connectButton'
 });
 
