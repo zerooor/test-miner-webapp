@@ -1,5 +1,22 @@
 const mineButton = document.getElementById("mineButton");
 const statusDiv = document.getElementById("status");
+const connectButton = document.getElementById("connectButton");
+const walletAddressDiv = document.getElementById("walletAddress");
+
+// Инициализация TON Connect UI
+const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+  manifestUrl: 'https://<ТВОЙ_ЮЗЕРНЕЙМ>.github.io/ton-miner-webapp/tonconnect-manifest.json',
+  buttonRootId: 'connectButton'
+});
+
+// Отображение подключённого адреса
+tonConnectUI.onStatusChange(wallet => {
+  if (wallet) {
+    walletAddressDiv.textContent = `Кошелёк: ${wallet.account.address}`;
+  } else {
+    walletAddressDiv.textContent = '';
+  }
+});
 
 const tg = window.Telegram.WebApp;
 tg.expand();

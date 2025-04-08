@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>TON Майнинг</h1>
+    <h1>Майнинг</h1>
+    <button id="connectButton">Подключить кошелёк</button>
+<div id="walletAddress"></div>
     <button id="mineButton">Начать майнинг</button>
     <div id="status">Готов к работе.</div>
   </div>
