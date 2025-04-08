@@ -2,7 +2,7 @@
   "manifest_version": "1",
   "name": "Miner WebApp",
   "short_name": "TONMiner",
-  "description": "Майнинг с PoW и наградами в TON",
+  "description": "Майнинг с PoW и наградами",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/ton-blockchain/ton-assets/master/ton/icon.png",
